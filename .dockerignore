@@ -1,0 +1,10 @@
+.git
+.gitignore
+*.md
+docker-compose.yml
+Dockerfile
+.idea/
+log/
+vendor/
+data/
+temp/

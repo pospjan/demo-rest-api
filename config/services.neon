@@ -1,0 +1,21 @@
+services:
+	- App\Core\RouterFactory::createRouter
+	- App\Infrastructure\SqliteForeignKeysHook
+	- App\Utils\SqlFileImporter
+	database:
+		create: Nette\Database\Connection(%database.dsn%, null, null, %database.options%)
+		setup:
+			- '$onConnect[]' = [@App\Infrastructure\SqliteForeignKeysHook, onConnect]
+
+
+search:
+	-	in: %appDir%
+		classes:
+			- *Facade
+			- *Factory
+			- *Repository
+			- *Service
+			- *Hook
+			- *Serializer
+			- *Importer
+			- *Policy

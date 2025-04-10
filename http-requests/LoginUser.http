@@ -1,0 +1,9 @@
+POST http://localhost:8000/auth/login
+
+{
+    "email": "test@example.com",
+    "password": "heslo123"
+}
+
+
+> {% client.global.set("accessToken", response.body.accessToken); %}

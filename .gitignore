@@ -1,0 +1,6 @@
+vendor
+.idea
+database.sqlite
+temp
+log/*.log
+log/*.html

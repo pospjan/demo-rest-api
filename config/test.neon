@@ -1,0 +1,22 @@
+parameters:
+    dbFile: %appDir%/../temp/database-test.sqlite
+
+services:
+    - App\Modules\Api\Presenters\ArticlePresenter
+    - App\Infrastructure\Serializer\ArticleSerializer
+    - App\Infrastructure\Deserializer\CreateUserRequestDeserializer
+    - App\Application\Facade\LoginFacade
+
+
+
+search:
+	-	in: %appDir%/../app
+		classes:
+			- *Facade
+			- *Factory
+			- *Repository
+			- *Service
+			- *Hook
+			- *Serializer
+			- *Importer
+			- *Policy

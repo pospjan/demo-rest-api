@@ -1,0 +1,7 @@
+PUT http://localhost:8000/articles/14
+Authorization: Bearer {{accessToken}}
+
+{
+    "title": "Test Article - updated",
+    "content": "This is a test article - updated"
+}
